@@ -1,0 +1,379 @@
+// *
+// Basic typography, expected to be overridden by many modules
+//
+
+$h1: 24px;
+$h2: 20px;
+$h3: 18px;
+$h4: 16px;
+
+$p: 16px;
+$p-plus: $p + 1;
+$p-minus: $p - 1;
+$p-vsmall: 10px;
+
+@include export('typography') {
+
+	span {
+		font-family: $font-body;
+		&.nowrap {
+			white-space: nowrap;
+		}
+		&.block {
+			display: block;
+		}
+	}
+	a {
+		margin: 0;
+		color: $link-color;
+		text-decoration: underline !important;
+	}
+	
+
+	td {
+		
+		// FONT SIZES
+		
+		///H1
+		&.h1 {			
+			span {				
+				font-size: $h1;
+				line-height: $h1 + 6;
+				color: $usaa-blue;
+				font-weight: bold;
+				&.l-half {
+					line-height: $h1/1.5 !important;
+				}				
+				a {
+					font-size: $h1;
+					color: $usaa-blue;
+					font-weight: bold;
+					line-height: $h1 + 6;
+				}			
+				sup {
+					font-size: $h1 - 6;
+					line-height: 1px;
+				}
+			}
+		}
+		span {
+			&.h1 {				
+				font-size: $h1 !important;
+				line-height: $h1 + 6 !important;
+				color: $usaa-blue;
+				font-weight: bold;
+				&.l-half {
+					line-height: $h1/1.5 !important;
+				}				
+				a {
+					font-size: $h1 !important;
+					color: $usaa-blue;
+					font-weight: bold;
+					line-height: $h1 + 6 !important;
+				}				
+				sup {
+					font-size: $h1 - 6 !important;
+					line-height: 1px;
+				}
+			}
+		}
+		
+		///H2
+		&.h2 {
+			
+			span {			
+				font-size: $h2;
+				color: $usaa-blue;
+				font-weight: bold;
+				&.l-half {
+					line-height: $h2/1.5 !important;
+				}			
+				a {
+					font-size: $h2;
+					color: $usaa-blue;
+					font-weight: bold;
+					line-height: $h1 + 6;
+				}				
+				sup {
+					font-size: $h2 - 6;
+					line-height: 1px;
+				}
+			}
+		}
+		span {
+			&.h2 {			
+				font-size: $h2 !important;
+				line-height: $h2 + 6 !important;
+				color: $usaa-blue;
+				font-weight: bold;
+				&.l-half {
+					line-height: $h2/1.5 !important;
+				}			
+				a {
+					font-size: $h2 !important;
+					color: $usaa-blue;
+					font-weight: bold;
+					line-height: $h2 + 6 !important;
+				}			
+				sup {
+					font-size: $h2 - 6 !important;
+					line-height: 1px;
+				}
+			}
+		}
+		
+		///H3
+		&.h3 {		
+			span {			
+				font-size: $h3;
+				color: $usaa-blue;
+				font-weight: bold;
+				font-family: $font-body;
+				&.l-half {
+					line-height: $h3/1.5 !important;
+				}			
+				a {
+					font-size: $h3;
+					line-height: $h1 + 6;
+				}		
+				sup {
+					font-size: $h3 - 6;
+					line-height: 1px;
+				}
+			}
+		}
+		span {
+			&.h3 {		
+				font-size: $h3 !important;
+				line-height: $h3 + 6 !important;
+				color: $usaa-blue;
+				font-weight: bold;
+				&.l-half {
+					line-height: $h3/1.5 !important;
+				}			
+				a {
+					font-size: $h3 !important;
+					color: $usaa-blue;
+					font-weight: bold;
+					line-height: $h3 + 6 !important;
+				}
+				sup {
+					font-size: $h3 - 6 !important;
+					line-height: 1px;
+				}
+			}
+		}
+		
+		///H4
+		&.h4 {
+			padding-bottom: 3px;	
+			span {
+				
+				font-size: $h4;
+				line-height: $h4 + 6;
+				color: $usaa-blue;
+				font-weight: bold;
+				&.l-half {
+					line-height: $h4/1.5 !important;
+				}
+				a {
+					font-size: $h4 !important;
+					color: $usaa-blue;
+					font-weight: bold;
+				}
+			}
+			sup {
+				font-size: $h4 - 6;
+				line-height: 1px;
+			}
+		}
+		span {
+			&.h4 {	
+				font-size: $h4 !important;
+				line-height: $h4 + 6 !important;
+				color: $usaa-blue;
+				font-weight: bold;
+				&.l-half {
+					line-height: $h4/1.5 !important;
+				}	
+				a {
+					font-size: $h4 !important;
+					color: $usaa-blue;
+					font-weight: bold;
+					line-height: $h4 + 6 !important;
+				}
+				sup {
+					font-size: $h4 - 6 !important;
+					line-height: 1px;
+				}
+			}
+		}
+		
+		///Paragraphs
+		&.p {	
+			span {
+				font-size: $p;
+				line-height: $p + 6;
+				color: $body-font-color;
+				&.l-half {
+					line-height: $p/1.5 !important;
+				}
+				&.l-double {
+					span{line-height: ($p * 2) - 3 !important;}
+				}
+				sup {
+					font-size: $p - 5 !important;
+					line-height: 1px !important;
+				}
+				a {
+					font-size: $p;
+					line-height: $p + 6;
+				}
+			}
+		}
+		&.p_plus {		
+			span {
+				font-size: $p-plus;
+				line-height: $p-plus + 6;
+				color: $body-font-color;
+			}
+		}
+		&.p_minus {
+			span {
+				font-size: $p-minus;
+				line-height: $p-minus + 6;
+				color: $body-font-color;
+			}
+		}
+		&.p_small {	
+			span {
+				font-size: 11px;
+				line-height: 16px;
+				display: block;
+				a {
+					font-size: 11px;
+					line-height: 16px;
+				}
+			}
+		}
+		&.p_vsmall {
+			span {
+				font-size: $p-vsmall;
+				line-height: $p-vsmall + 6;
+				display: block;
+				a {
+					font-size: $p-vsmall;
+					line-height: $p-vsmall + 6;
+				}
+			}
+		}
+		
+		/// FONT FAMILIES
+		
+		///Times New Roman
+		&.times {	
+			span {
+				font-family: $font-headers !important;
+				&.times {
+					font-family: $font-headers !important;
+				}
+			}
+		}
+		span {	
+			&.times {
+				font-family: $font-headers !important;
+			}
+		}
+		a {
+			&.times {
+				font-family: $font-headers !important;
+			}
+		}
+		
+		///Arial
+		&.arial {
+			
+			span {
+				font-family: $font-body;
+			}
+		}
+		span {
+			&.arial {
+				font-family: $font-body !important;
+			}
+		}
+		a {
+			&.arial {
+				font-family: $font-body !important;
+			}
+		}
+	}
+
+	
+	
+	
+	
+	
+	/// CUSTOM FONT-SIZES (good for when you want to shrink a font size on mobile)
+	.custom-type-1 {
+		padding-bottom: 6px;
+		span {
+			font-size: 26px;
+			@include mq($mq-small) {
+				font-size: 14px !important;
+			}
+		}
+	}
+	.custom-type-2 {
+		padding-bottom: 6px;
+		span {
+			font-size: 46px;
+			display: block;
+			line-height: 50px;
+			@include mq($mq-small) {
+				font-size: 28px !important;
+				line-height: 32px;
+			}
+		}
+	}
+	.custom-type-3 {
+		span {
+			font-size: 36px;
+			@include mq($mq-small) {
+				font-size: 22px !important;
+			}
+		}
+	}
+	
+
+	//DEC
+	
+	span {
+		&.underline {
+			text-decoration: underline !important;
+		}
+	}
+
+
+    //// FONT WEIGHTS
+	
+	.regular {
+		span{font-weight: 100 !important;}
+
+	}
+	span {
+		&.regular {
+			font-weight: 100 !important;
+		}
+		&.bold {
+			font-weight: bold !important;
+		}
+	}
+	
+	.bold {
+		span{font-weight: bold !important;}
+
+	}
+
+
+}

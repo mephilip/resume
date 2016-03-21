@@ -1,0 +1,87 @@
+@include export('grid-pm') {
+			
+
+	table {
+		
+		&.page-margin {width: $page-margin;}
+		&.page-margin-plus {width: $page-margin-plus;}
+		
+		&.page-margin-plus,
+		&.page-margin {
+			
+			margin: 0 auto;
+			
+			td {
+				
+				&.column {
+					
+					&.nogutter {
+						padding-left: 0 !important;
+						padding-right: 0 !important;
+					}
+					
+					@for $i from 1 through $column-count {
+						&.#{nth($numbers, $i)}{
+							&.min {
+								min-width: (($i / $column-count) * $page-margin) - 18;
+							}
+							table{
+								&.cell {
+									width: (($i / $column-count) * $page-margin) - 18;
+									
+									table {
+										&.shrink {
+											width: (($i / $column-count) * $page-margin) - (($full-width - $page-margin));
+										}
+										&.shrink-up {
+											width: (($i / $column-count) * $page-margin - 18) - (($full-width - $page-margin)/5);
+										}
+										&.icon-gutter {
+											width: (($i / $column-count) * $page-margin) - 10;
+										}
+									}
+								}
+							}
+						}
+					}
+					
+						
+					&.first {
+						padding-right: 3px;
+						td {
+							&.equalizer {
+								padding-right: 6px;
+							}
+						}
+					}
+					&.last {
+						padding-left: 3px;
+						td {
+							&.equalizer {
+								padding-left: 6px;
+							}
+						}
+					}
+						
+					&:not(.first):not(.last) {
+						padding-left: 6px;
+						padding-right: 6px;
+					}
+
+						
+					table {
+							
+						&.cell {
+							width: ($page-margin / 3);
+						}
+						
+					}
+					
+				}
+				
+			}
+		}
+		
+	}		
+	
+}

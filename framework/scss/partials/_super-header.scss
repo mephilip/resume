@@ -1,0 +1,19 @@
+// *
+// Super header, the stuff above the actual email container
+//
+
+@include export('super-header') {
+
+	.super-header {
+		span {
+			display: block;
+		}
+		td, span, p, a {
+			color: #666666;
+			font-size: 11px;
+			font-family: $font-body;
+			line-height: 17px !important;
+		}
+	}
+
+}

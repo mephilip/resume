@@ -1,0 +1,61 @@
+@include export('grid-fw') {
+	
+	div {
+		&.div-wrapper{
+			position: relative;
+			width: 100%;
+			max-width: 700px;
+			min-width: 700px;
+			margin: 0 auto;
+			div {
+				&.nowrap{
+					display: none;
+					white-space: nowrap;
+					font: 15px courier;
+					color: #e5e5e5;
+				}
+			}
+		}
+	}
+	
+	table {	
+		&.container {
+			width: $full-width;
+			margin: 0 auto;
+			min-width: $full-width;
+		}
+		td {
+			&.full-width {
+				width: $full-width;
+			}
+			&.column {				
+				@for $i from 1 through $column-count {
+					&.#{nth($numbers, $i)}{
+						table{
+							&.cell {
+								@if $i < ($column-count / 2) { width: floor(($i / $column-count) * $full-width); }
+							
+								@if $i > ($column-count / 2) { width: ceil(($i / $column-count) * $full-width); }
+								
+								@if $i == ($column-count / 2) { width: ($i / $column-count) * $full-width; }
+								
+								table {
+									&.shrink {
+										width: (($i / $column-count) * $full-width) - (($full-width - $page-margin));
+									}
+									&.shrink-up {
+										width: (($i / $column-count) * $full-width) - (($full-width - $page-margin)/2);
+									}
+									&.icon-gutter {
+										width: (($i / $column-count) * $full-width) - 10;
+									}
+								}
+							}
+						}
+					}
+				}				
+			}
+		}		
+	}
+		
+}

@@ -1,0 +1,18 @@
+// *
+// Global/body styles
+//
+
+@include export('body') {
+
+	body, .body {
+
+		background: $bg-color-primary;
+		font-family: $font-body;
+		width: 100%;
+		&.asc {
+			background: #ffffff;
+		}
+
+	}
+
+}

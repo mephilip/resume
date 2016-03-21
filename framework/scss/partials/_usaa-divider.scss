@@ -1,0 +1,20 @@
+// *
+// Gold and Blue horizontal rule
+//
+
+@include export('usaa-divider') {
+
+	.usaa-divider {
+
+		font-size: 0;
+		padding: 0 0 14px 0 !important;
+		height: 0;
+		border-top-width: 3px;
+		border-top-style: solid;
+		border-top-color: #fac705;
+		background: $bg-color-accent;
+
+
+	}
+
+}

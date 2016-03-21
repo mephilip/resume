@@ -1,0 +1,269 @@
+@include export('r-grid') {
+	
+	@include mq($mq-small) {		
+		table[class="body"] {	
+				div {
+					&.div-wrapper {
+						min-width: 0 !important;
+					}
+					&.nowrap {
+						white-space: normal !important;
+					}
+				}
+				span {
+					&.nowrap {
+						white-space: normal !important;
+					}
+				}			
+				center {
+					min-width: 0 !important;
+				}	
+				table {			
+					&.container {
+						width: 95% !important;
+						min-width: 0 !important;
+					}
+					&:not(.container) {				
+						width: 100% !important;
+						float: none !important;
+						
+						&.mobile-margin {
+							width: 90% !important;
+						}
+						&.m-w-auto {
+							width: auto !important;
+							margin: 0 auto;
+							float: none !important;
+						}
+					}
+					&.non-responsive {
+						td {
+							&.column {
+								display: table-cell !important;
+							}
+						}
+					}
+				}		
+				td {
+					&.column {
+						display: block;
+						width: auto !important;
+					}
+					
+					&.mobile-pad-bottom {
+						padding-bottom: 15px !important;
+					}
+					&.mobile-pad-bottom-plus {
+						padding-bottom: 30px !important;
+					}
+					&.m-h-auto {
+						height: auto !important;
+					}
+					&.m-w-auto {
+						width: auto !important;
+					}
+					&.m-img-100 {
+						img {
+							width: 100% !important;
+						}
+					}
+					img {
+						&.m-img-100 {
+							width: 100% !important;
+						}
+					}
+					&.m-pad-top {
+						padding-top: 20px !important;
+					}
+					&.m-pad-bottom {
+						padding-bottom: 20px !important;
+					}
+						
+					td {
+						&.logo {
+							text-align: center !important;
+							padding-top: 15px !important;
+							padding-bottom: 5px !important;
+							img {
+								display: inline !important;
+							}
+						}
+						&.equalizer {
+							padding: 0 !important;
+						}
+						&.mainCol {display: table-header-group !important}
+						&.subCol {display: table-footer-group !important}
+					}
+				}
+				
+				td {
+					&.full-width {
+						width: 100% !important;
+					}
+					&.bg-responsive {
+						background: url('../images/lg-masthead.jpg') !important;
+						td {
+							background-size: cover;
+						}
+						table {
+							&.cell {
+								margin: 0 auto;
+							}
+						}
+					}
+					&.r-txt {
+						td {
+							&.h1 {
+				
+								span {
+									
+									font-size: $h1 - 2 !important;
+									line-height: ($h1 - 2) + 6 !important; 
+									
+									a {
+										font-size: $h1 - 2 !important;
+										line-height: ($h1 + 6) - 2 !important;
+									}
+									
+									sup {
+										font-size: $h1 - 10 !important;
+									}
+								}
+							}
+							span {
+								&.h1 {
+									
+									font-size: $h1 - 2 !important;
+									line-height: ($h1 - 2) + 6 !important;
+									
+									a {
+										font-size: $h1 - 2 !important;
+										line-height: ($h1 - 2) + 6 !important;
+									}
+									
+									sup {
+										font-size: $h1 - 10 !important;
+									}
+								}
+							}
+							&.h2 {
+								
+								span {
+									
+									font-size: $h2 - 2 !important;
+
+									a {
+										font-size: $h2 - 2 !important;
+										line-height: ($h2 - 2) + 6;
+									}
+									
+									sup {
+										font-size: $h2 - 2 - 6;
+									}
+								}
+							}
+							span {
+								&.h2 {
+									
+									font-size: $h2 - 2 !important;
+									line-height: $h2 - 2 + 6 !important;
+									
+									a {
+										font-size: $h2 - 2 !important;
+										line-height: $h2 - 2 + 6 !important;
+									}
+									
+									sup {
+										font-size: $h2 - 6 !important;
+									}
+								}
+							}
+							&.h3 {
+								
+								span {
+									
+									font-size: $h3 - 2 !important;
+									
+									a {
+										font-size: $h3 - 2 !important;
+										line-height: $h3 - 2 + 6 !important;
+									}
+									
+									sup {
+										font-size: $h3 - 6;
+									}
+								}
+							}
+							span {
+								&.h3 {
+									
+									font-size: $h3 - 2 !important;
+									line-height: $h3 - 2 + 6 !important;
+									
+									a {
+										font-size: $h3 - 2 !important;
+										line-height: $h3 - 2 + 6 !important;
+									}
+									
+									sup {
+										font-size: $h3 - 6 !important;
+									}
+								}
+							}
+							&.h4 {			
+								span {
+									
+									font-size: $h4 - 2 !important;
+									
+									a {
+										font-size: $h4 - 2 !important;
+									}
+								}
+								
+								sup {
+										font-size: $h4 - 6 !important;
+									}
+							}
+							span {
+								&.h4 {
+									
+									font-size: $h4 - 2 !important;
+									line-height: $h4 - 2 + 6 !important;
+									
+									a {
+										font-size: $h4 - 2 !important;
+										line-height: $h4 - 2 + 6 !important;
+									}
+									
+									sup {
+										font-size: $h4 - 6 !important;
+									}
+								}
+							}
+							
+							&.p {
+								
+								span {
+									font-size: $p !important;
+									line-height: $p + 6;
+
+									
+									sup {
+										font-size: $p - 5 !important;
+										line-height: 1px !important;
+									}
+									
+									a {
+										font-size: $p;
+										line-height: $p + 6;
+									}
+								}
+							}
+						}
+					}
+				}
+		}
+		
+	}
+	
+}

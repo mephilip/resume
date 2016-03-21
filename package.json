@@ -1,0 +1,33 @@
+{
+  "name": "bare-minimum",
+  "brand": "usaa",
+  "subject": "This is the bare minimum",
+  "date": "2016/03",
+  "version": "2.0.0",
+  "description": "a scss framework and system for building HTML emails",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "C-E Digital Studio",
+  "license": "Copyright 2015 Campbell-Ewald",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-cloudfiles": "^0.1.3",
+    "gulp-combine-media-queries": "^0.2.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-email-builder": "^1.0.4",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-mailgun": "0.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.3",
+    "gulp-sass": "^2.0.3",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.6",
+    "gulp-zip": "^3.0.2",
+    "iconv-lite": "^0.4.12",
+    "jsonfile": "^2.2.1",
+    "vinyl-ftp": "^0.4.5"
+  }
+}

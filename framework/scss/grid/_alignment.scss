@@ -1,0 +1,114 @@
+// *
+// for simple aligning of stuff
+//
+
+@include export('alignments') {
+	
+	td {
+		&:not(.no-align) {
+			text-align: left;
+		}
+	}
+	
+	.middle {
+		vertical-align: middle !important;
+		td {
+			&.column {
+				vertical-align: middle !important;
+			}
+		}
+	}
+	
+	.top {
+		vertical-align: top !important;
+		td {
+			&.column {
+				vertical-align: top !important;
+			}
+		}
+	}
+	
+	.bottom {
+		vertical-align: bottom !important;
+		td {
+			&.column {
+				vertical-align: bottom !important;
+			}
+		}
+	}
+
+	.right {
+		text-align: right !important;
+		img {
+			display: inline !important;
+		}
+	}
+
+	.center {
+		text-align: center !important;
+		img {
+			margin: 0 auto;
+			float: none;
+		}
+	}
+	
+	.justify {
+		text-align: justify !important;
+	}
+	
+	.img-center {
+		text-align: center !important;
+		img {
+			display: inline !important;
+			margin: 0 auto;
+			float: none;
+		}
+	}
+
+	.left {
+		text-align: left;
+		img {
+			display: inline;
+		}
+	}
+
+	.mobile-left {
+		@include mq($mq-small) {
+			text-align: left !important;
+		}
+	}
+	
+	.mobile-right {
+		@include mq($mq-small) {
+			text-align: right !important;
+		}
+	}
+
+	.mobile-center {
+		@include mq($mq-small) {
+			text-align: center !important;
+			img {
+				margin: 0 auto !important;
+				float: none !important;
+			}
+		}
+	}
+	
+	td {
+		&.mobile-left {
+			@include mq($mq-small) {
+				span{text-align: left !important;}
+			}
+		}
+		&.mobile-center {
+			@include mq($mq-small) {
+				span{text-align: center !important;}
+				img {
+					margin: 0 auto !important;
+					float: none !important;
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,21 @@
+// *
+// Useful functions and mixins
+//
+
+// trick from Foundation to have files only print once, no matter
+// how many files include them
+$modules: () !global;
+@mixin export($name) {
+  @if not index($modules, $name) {
+    $modules: append($modules, $name) !global;
+    @content;
+  }
+  //@debug $modules;
+}
+
+// media queries
+@mixin mq($query) {
+	@media #{unquote($query)} {
+		@content;
+	}
+}

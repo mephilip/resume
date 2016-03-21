@@ -1,0 +1,54 @@
+@include export('footer') {
+	
+	.footer-top,
+	.footer-middle,
+	.footer-bottom {
+		td {
+			span {
+				font-size: 11px;
+				line-height: 16px;
+			}
+			a {
+					font-size: 11px;
+					line-height: 16px;
+			}
+		}
+	}
+	
+	.footer-middle {
+		span {
+			display: block;
+		}
+		td {
+			&.column {
+				td {
+					padding-left: 15px;
+					padding-right: 15px;
+					padding-bottom: 10px;
+				}
+				@include mq($mq-small) {
+					padding-bottom: 15px !important;
+				}
+			}
+		}
+	}
+	
+	.footer-bottom {
+		td {
+			&.first {
+				td {
+					padding-left: 15px;
+				}
+			}
+			&.last {
+				td {
+					padding-right: 15px;
+					@include mq($mq-small) {
+						padding-left: 15px !important;
+					}
+				}
+			}
+		}
+	}
+	
+}

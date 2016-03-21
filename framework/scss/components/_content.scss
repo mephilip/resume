@@ -1,0 +1,17 @@
+// *
+// Content table styles
+//
+
+@include export('content') {
+
+	.content {
+		background: white;
+		border: 1px solid $border-color;
+	}
+	
+	.content-blue {
+		background: #12395b;
+		border: 0;
+	}
+
+}

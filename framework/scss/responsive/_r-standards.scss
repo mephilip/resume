@@ -1,0 +1,23 @@
+@include export('r-standards') {
+	@include mq($mq-small) {
+		td {
+			&.mobile-text-pad {
+				padding-left: 15px !important;
+				padding-right: 15px !important;
+			}
+		}
+		
+		.hide-for-small,
+		.show-for-desktop {
+			display: none !important;
+		}
+
+		.show-for-small,
+		.hide-for-desktop {
+			display: inherit !important;
+			&.wrapper {
+				display: block !important;
+			}
+		}
+	}
+}

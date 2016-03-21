@@ -1,0 +1,94 @@
+// *
+// Simple color classes
+//
+
+@include export('colors') {
+
+	.white {
+		&, span, a, p, h1, h2, h3, h4, h5, h6 {
+			color: $font-color-light !important;
+		}
+	}
+	
+	.green {
+		span {
+			color: #848345 !important;
+		}
+	}
+
+	.gold {
+		span {
+			color: $usaa-gold !important;
+		}
+	}
+	
+	span {
+		&.gold {
+			color: $usaa-gold !important;
+		}
+	}
+	a {
+		&.gold {
+			color: $usaa-gold !important;
+		}
+	}
+
+
+	.blue {
+		span {
+			color: $usaa-blue !important;
+		}
+	}
+	
+	span {
+		&.blue {
+			color: $usaa-blue !important;
+		}
+	}
+	
+	a {
+		&.blue {
+			color: $usaa-blue !important;
+		}
+	}
+	
+	.black {
+		span {
+			color: black !important;
+		}
+	}
+	
+	span {
+		&.black {
+			color: black !important;
+		}
+	}
+	a {
+		&.black {
+			color: black !important;
+		}
+	}
+	
+	.body-font-color {
+		span {
+			color: $body-font-color !important;
+		}
+	}
+	
+	span {
+		&.body-font-color {
+			color: $body-font-color !important;
+		}
+	}
+	a {
+		&.body-font-color {
+			color: $body-font-color !important;
+		}
+	}
+
+
+	.environment {
+		color: #00a150;
+	}
+
+}

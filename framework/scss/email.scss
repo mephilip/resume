@@ -1,0 +1,39 @@
+// *
+// Main CSS file to be inlined
+//
+//
+
+@import
+	'grid/functions',
+	
+	// settings
+	'settings/variables',
+	'settings/typography',
+	
+	// controllers	
+	'grid/grid-fw', //grid based on full width
+	'grid/grid-pm', //grid based on page margin
+	'grid/alignment',
+
+	// components
+	//'components/variables',
+	//'components/typography',
+	'components/compatibility-standards',
+	'components/body',
+	'components/content',
+	'components/colors',
+	
+	// partials
+	'partials/super-header',
+	'partials/header',
+	'partials/usaa-divider',
+	'partials/footer',	
+	
+	
+	// responsive
+	'responsive/r-grid', //responsive qualities of the grid
+	'responsive/r-standards'
+	;
+
+
+

@@ -1,0 +1,137 @@
+
+
+@include export('compatibility-standards') {
+	
+	/////// Microsoft Office <2013
+	
+	
+	//apply this to a td used as a vertical spacer if you are setting the height lower than 15px
+	.mso-empty { font-size:0px; line-height:0px; border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
+	
+	#outlook a {
+	  padding:0;
+	}
+	
+	//Outlook First 
+	body.outlook p {
+	  display: inline !important;
+	}
+
+	
+	
+	
+	
+	/////// YAHOO!
+	
+	//use this along with align="center" to ensure a table is centering within a specified container with a set width
+	.yahoo-align-center { margin: auto; }
+
+
+	/////// LITMUS
+	
+	//this is simply for the fact the litmus needs it for background images
+	.bg-litmus {
+		background-image: url('repeater.jpg');
+	}
+
+	/////// MORE STANDARDS
+
+	body{
+	  width:100% !important;
+	  min-width: 100%;
+	  -webkit-text-size-adjust:100%;
+	  -ms-text-size-adjust:100%;
+	  margin:0;
+	  padding:0;
+	}
+
+	img {
+	  outline:none;
+	  text-decoration:none;
+	  -ms-interpolation-mode: bicubic;
+	  width: auto;
+	  max-width: 100%;
+	  clear: both;
+	  display: block;
+
+		&.inline {
+			display: inline;
+			vertical-align: middle;
+		}
+		
+		&.full-width {
+			width: $full-width;
+		}
+	}
+
+	center {
+	  width: 100%;
+	  min-width: $full-width;
+	}
+
+	a img {
+	  border: none;
+	}
+
+	p {
+	  margin: 0 0 0 0;
+	}
+
+
+	table {
+	  border-spacing: 0;
+	  border-collapse: collapse;
+	  &.seperate {
+		  border-collapse: separate !important;
+	  }
+	}
+
+	td {
+	  word-break: break-word;
+	  -webkit-hyphens: none;
+	  -moz-hyphens: none;
+	  hyphens: none;
+	  border-collapse: collapse !important;
+	  &.cover {
+		  background-size: cover !important;
+	  }
+	  &.box-shadow-img {
+		  img {
+		  	box-shadow: 2px 4px 4px #000;
+		  	border-radius: 10px;
+		  }
+	  }
+	  &.box-shadow-img-minus {
+		  img {
+		  	box-shadow: 2px 3px 3px #000;
+		  	border-radius: 5px;
+		  }
+	  }
+	}
+
+	table, tr, td {
+	  padding: 0;
+	  vertical-align: top;
+	}
+
+	hr {
+	  color: #d9d9d9;
+	  background-color: #d9d9d9;
+	  height: 1px;
+	  border: none;
+	}
+
+	.max-height {
+		height: 3px;
+		max-height: 3px;
+	}
+	.w-auto {
+		width: auto !important;
+	}
+	.w-100 {
+		width: 100% !important;
+	}
+	
+	
+	
+}

@@ -1,0 +1,77 @@
+table {	
+	
+		&.header {
+			
+			table {
+			
+				
+				td {
+					
+					&.cell {
+						height: 112px;
+						vertical-align: middle !important;
+					}
+					
+				}
+				
+				&.security-zone {
+					
+					@include mq($mq-small) {
+							width: 100% !important;
+						}
+					.security-container {
+						
+						@include mq($mq-small) {
+							width: 196px !important;
+							margin: auto;
+						}
+					}
+					
+					img {
+						display: block;
+					    width: auto;
+					    padding: 0;
+					    border: 0;
+					}
+					td {
+						
+						&.cell {
+							
+							table {
+								
+								td {
+									
+									&.lock {
+										line-height: 30px; 
+										vertical-align: top; 
+										padding: 0px;
+				
+		
+										
+										img {
+											float: none !important;
+											margin: 0 !important;
+											text-align: right !important;
+											display: block;
+										
+										}
+									}
+									
+									&.security-info {
+										
+										span {
+											display: block;
+											font-size: 11px !important;
+											line-height: 16px !important;
+											font-family: $font-body;
+											color: $usaa-blue;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+}
